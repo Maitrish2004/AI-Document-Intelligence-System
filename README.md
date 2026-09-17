@@ -37,12 +37,13 @@ Workflow
 
 
 
-Upload PDF →  Process & Summarize  →  Ask AI
+Upload PDF  →  Process & Summarize  →  Ask AI
                  ↓
       AI Answer + Source Page
                  ↓
        Relevant Highlighting
 
+ 
  Objective
 
 To help users quickly understand, search, and verify information from PDF documents using AI.
