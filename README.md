@@ -23,17 +23,19 @@ Architecture
              ↓
    AI Answer + Source Page + Highlight
              ↓
-        User Dashboard
-
+       User Dashboard
 
 Tech Stack
+
 Frontend: React.js, JavaScript, HTML, CSS
 Backend: Node.js, Express.js
 Database: MySQL
 AI: Google Gemini API
 Processing: OCR, PDF Processing
 
- Workflow
+Workflow
+
+
 
 Upload PDF → Process & Summarize → Ask AI
                     ↓
