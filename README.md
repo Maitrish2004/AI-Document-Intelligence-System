@@ -21,9 +21,9 @@ Architecture
              ↓
       Gemini AI ─── MySQL
              ↓
-   AI Answer + Source Page + Highlight
+      AI Answer + Source Page + Highlight
              ↓
-       User Dashboard
+      User Dashboard
 
 Tech Stack
 
@@ -37,11 +37,14 @@ Workflow
 
 
 
-Upload PDF → Process & Summarize → Ask AI
+Upload PDF →  Process & Summarize  →  Ask AI
+                    
                     ↓
+          
           AI Answer + Source Page
+                    
                     ↓
-           Accurate Highlighting
+          Accurate Highlighting
 
  Objective
 
