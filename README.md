@@ -38,9 +38,9 @@ Workflow
 
 
 Upload PDF →  Process & Summarize  →  Ask AI
-                    ↓
-          AI Answer + Source Page
-                    ↓
+                  ↓
+      AI Answer + Source Page
+                  ↓
           Accurate Highlighting
 
  Objective
