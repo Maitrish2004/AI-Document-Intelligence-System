@@ -1,0 +1,638 @@
+/* =========================
+   GLOBAL
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: linear-gradient(
+    135deg,
+    #022c22,
+    #064e3b,
+    #14532d
+  );
+  color: #333;
+  min-height: 100vh;
+}
+/* =========================
+  NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #022c22;
+  color: white;
+  padding: 15px 20px;
+  border-bottom: 2px solid #facc15;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.navbar a:hover {
+  color: #facc15;
+}
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar button:hover {
+  color: #facc15;
+}
+/* =========================
+   SIDEBAR
+   ========================= */
+.sidebar {
+  width: 220px;
+  min-height: calc(100vh - 54px);
+  align-self: stretch;
+  background: #022c22;
+  color: white;
+  padding: 20px;
+  border-right: 2px solid #facc15;
+}
+.sidebar ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.sidebar li {
+  margin: 15px 0;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.sidebar a:hover {
+  color: #facc15;
+}
+
+
+/* =========================
+   LOGIN / REGISTER
+   ========================= */
+
+.auth-container {
+  width: 400px;
+  max-width: 90%;
+
+  margin: 80px auto;
+
+  padding: 38px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 2px solid rgba(250, 204, 21, 0.45);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35);
+
+  animation: authFade 0.5s ease;
+}
+
+@keyframes authFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Heading */
+.auth-container h2 {
+  text-align: center;
+
+  font-size: 30px;
+
+  margin-bottom: 5px;
+
+  color: #064e3b;
+}
+.auth-container h2::after {
+  content: "AI Document Intelligence";
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #b45309;
+  margin-top: 8px;
+}
+
+
+/* Input */
+
+.auth-container input {
+  width: 100%;
+  padding: 14px 15px;
+  margin: 10px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  background: #f8fafc;
+  transition: all 0.25s;
+}
+
+.auth-container input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-container input:focus {
+  border-color: #d4a900;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px rgba(250, 204, 21, 0.20);
+}
+
+
+/* Button */
+
+.auth-container button {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #facc15,
+    #eab308
+  );
+
+  color: #022c22;
+  font-size: 16px;
+  font-weight: 700;
+   cursor: pointer;
+
+  transition: all 0.25s;
+}
+.auth-container button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    #fde047,
+    #facc15
+  );
+ box-shadow:
+  0 10px 22px rgba(250, 204, 21, 0.35);
+}
+.auth-container button:active {
+  transform: translateY(0);
+}
+/* Login / Register Link */
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+.auth-footer a {
+  color: #047857;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.auth-footer a:hover {
+  color: #b45309;
+ text-decoration: underline;
+}
+/* =========================
+  UPLOAD CARD
+========================= */
+.upload-card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #facc15;
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-card button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #047857;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+.upload-card button:hover {
+  background: #065f46;
+}
+.upload-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  margin: 20px 0 10px;
+}
+.upload-description {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   DOCUMENT CARD
+   ========================= */
+.document-card {
+background: white;
+padding: 15px;
+margin: 10px 0;
+border-radius: 10px;
+border-left: 4px solid #047857;
+box-shadow:
+0 0 5px rgba(0, 0, 0, 0.1);
+}
+.document-card .actions {
+margin-top: 10px;
+display: flex;
+gap: 10px;
+}
+.document-card a {
+text-decoration: none;
+color: #047857;
+font-weight: 600;
+}
+.document-card a:hover {
+  color: #b45309;
+}
+/* =========================
+   BUTTONS
+   ========================= */
+button {
+border-radius: 5px;
+font-size: 14px;
+}
+/* =========================
+  MOBILE
+========================= */
+@media (max-width: 500px) {
+.auth-container {
+margin: 40px auto;
+padding: 25px;
+}
+.auth-container h2 {
+  font-size: 26px;
+}
+}
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  margin: 20px 0;
+}
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page {
+  flex: 1;
+  min-height: calc(100vh - 54px);
+  padding: 38px 44px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 780px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   PROFILE HEADER
+========================= */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 30px 34px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f8fafc
+  );
+}
+
+/* Avatar */
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #4338ca
+  );
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 6px 16px rgba(79, 70, 229, 0.30);
+}
+
+/* Name + Email */
+
+.profile-heading h2 {
+  margin: 0 0 6px;
+
+  font-size: 26px;
+  font-weight: 800;
+
+  color: #064e3b;
+}
+
+.profile-heading p {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #64748b;
+}
+
+/* Divider */
+
+.profile-line {
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* =========================
+   PROFILE DETAILS
+========================= */
+
+.profile-details {
+  padding: 6px 34px 18px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  min-height: 64px;
+
+  padding: 16px 5px;
+
+  border-bottom: 1px solid #eef2f7;
+
+  transition: background 0.2s ease;
+}
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+.profile-row:hover {
+  background: #f8fafc;
+}
+
+/* Label */
+
+.profile-label {
+  width: 130px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #64748b;
+}
+
+/* Value */
+
+.profile-value {
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #1e293b;
+
+  text-align: left;
+
+  word-break: break-word;
+}
+
+/* Joined Date */
+
+.profile-row:last-child .profile-value {
+  color: #047857;
+}
+
+/* =========================
+   PROFILE MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .profile-page {
+    padding: 25px 15px;
+  }
+
+  .profile-card {
+    border-radius: 14px;
+  }
+
+  .profile-header {
+    padding: 24px 20px;
+    gap: 15px;
+  }
+
+  .profile-avatar {
+    width: 58px;
+    height: 58px;
+    font-size: 25px;
+  }
+
+  .profile-heading h2 {
+    font-size: 21px;
+  }
+
+  .profile-heading p {
+    font-size: 13px;
+  }
+
+  .profile-details {
+    padding: 5px 20px 15px;
+  }
+
+  .profile-row {
+    min-height: auto;
+    padding: 15px 5px;
+  }
+
+  .profile-label {
+    width: 105px;
+    font-size: 13px;
+  }
+
+  .profile-value {
+    font-size: 14px;
+  }
+}
+/* =========================
+   SEARCH PAGE
+   ========================= */
+
+.search-page {
+  flex: 1;
+  padding: 28px 24px;
+  min-height: calc(100vh - 70px);
+}
+
+.search-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.search-description {
+  color: #d1fae5;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 700px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 13px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: white;
+}
+
+.search-box input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.2);
+}
+
+.search-box button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #facc15;
+  color: #022c22;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.search-box button:hover {
+  background: #fde047;
+  transform: translateY(-1px);
+}
+
+.search-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 22px 0;
+}
+
+.results-count {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.no-results {
+  color: #fecaca;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.search-empty {
+  margin-top: 45px;
+  padding: 35px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(2, 44, 34, 0.35);
+  max-width: 700px;
+}
+.search-empty h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.search-empty p {
+  color: #d1fae5;
+  font-size: 15px;
+}
+/* =========================
+   DASHBOARD DOCUMENTS
+========================= */
+
+.documents-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  margin: 18px 0 8px;
+}
+
+.documents-empty {
+  font-size: 15px;
+  font-weight: 500;
+  color: #d1fae5;
+  margin-top: 8px;
+}
