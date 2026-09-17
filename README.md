@@ -38,10 +38,10 @@ Workflow
 
 
 Upload PDF →  Process & Summarize  →  Ask AI
-                  ↓
+                 ↓
       AI Answer + Source Page
-                  ↓
-          Accurate Highlighting
+                 ↓
+       Relevant Highlighting
 
  Objective
 
