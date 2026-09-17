@@ -9,19 +9,21 @@ AI-powered full-stack application for PDF understanding, summarization, and ques
 -  Ask AI questions about documents
 -  Source Page Detection
 -  Accurate Relevant Content Highlighting
+
+
 Architecture
 
-React Frontend
-      ↓
-Node.js + Express
-      ↓
-OCR / PDF Processing
-      ↓
-Gemini AI ─── MySQL
-      ↓
-AI Answer + Source Page + Highlight
-      ↓
-User Dashboard
+         React Frontend
+              ↓
+       Node.js + Express
+              ↓
+      OCR / PDF Processing
+             ↓
+      Gemini AI ─── MySQL
+             ↓
+   AI Answer + Source Page + Highlight
+             ↓
+        User Dashboard
 
 
 Tech Stack
